@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+        <Button
+            android:onClick="lightOn"
+            style="@style/AppTheme.Button"
+            android:text="@string/on_button"/>
+        <ImageButton
+            android:onClick="pHueOn"
+            android:src="@drawable/phue"
+            android:scaleType="centerCrop"
+            style="@style/AppTheme.Button"/>
+        <Button
+            android:onClick="lightOff"
+            style="@style/AppTheme.Button"
+            android:text="@string/off_button"/>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/red_seek"
+        style="@style/AppTheme.SeekBar"
+        android:background="@color/red" />
+
+    <SeekBar
+        android:id="@+id/green_seek"
+        style="@style/AppTheme.SeekBar"
+        android:background="@color/green" />
+
+    <SeekBar
+        android:id="@+id/blue_seek"
+        style="@style/AppTheme.SeekBar"
+        android:background="@color/blue" />
+
+    <LinearLayout
+        android:id="@+id/rgb_value_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/red_value"
+            android:textColor="@color/red"
+            android:text="255"
+            style="@style/AppTheme.RGB"/>
+        <TextView
+            android:id="@+id/green_value"
+            android:textColor="@color/green"
+            android:text="255"
+            style="@style/AppTheme.RGB"/>
+        <TextView
+            android:id="@+id/blue_value"
+            android:textColor="@color/blue"
+            android:text="255"
+            style="@style/AppTheme.RGB"/>
+
+    </LinearLayout>
+
+</LinearLayout>
